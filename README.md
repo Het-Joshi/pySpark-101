@@ -78,6 +78,8 @@ _Note: The catalyst optimizer does not apply to Resilient Distributed Datasets (
    print(rdd.collect())
    ```
 
+Additional Reading [Caching, Persistance and Checkpoints](https://medium.com/@john_tringham/spark-concepts-simplified-cache-persist-and-checkpoint-225eb1eef24b)
+
 2. **DataFrame:**
    - Distributed collection of data organized into named columns (like SQL tables).
    ```python
