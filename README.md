@@ -1,6 +1,23 @@
 # pySpark-101
 To learn PySpark and all the essentials, it's crucial to understand its foundation, architecture, and functionality. Here's a structured guide to help you get started and become proficient in PySpark.
 
+## Definations
+
+1. **Transformation**
+> A method on a dataframe which returns another dataframe.
+
+2. **Action**
+> A method on a dataframe which returns a value.
+
+Spark has a great breakdown of which operations are classified as transformations and actions.
+
+3. **Catalyst Optimizer**
+> A Spark mechanism which assesses all the transformations it has to run, and figures out the most efficient way to run them together.
+
+This concept is very important, as when paired with lazy evaluation, it speeds up your data pipelines! 
+
+_Note: The catalyst optimizer does not apply to Resilient Distributed Datasets (RDDs) - only dataframes and datasets. We’ll be focusing on dataframes in this article._
+
 ---
 
 ## **Step 1: Understand Spark Basics**
@@ -53,7 +70,7 @@ To learn PySpark and all the essentials, it's crucial to understand its foundati
 ## **Step 3: Core PySpark Concepts**
 1. **Resilient Distributed Dataset (RDD):**
    - Immutable distributed collections of objects.
-   - Lazy evaluation and fault-tolerant.
+   - [Lazy evaluation](https://medium.com/@john_tringham/spark-concepts-simplified-lazy-evaluation-d398891e0568) and fault-tolerant.
    ```python
    from pyspark import SparkContext
    sc = SparkContext()
